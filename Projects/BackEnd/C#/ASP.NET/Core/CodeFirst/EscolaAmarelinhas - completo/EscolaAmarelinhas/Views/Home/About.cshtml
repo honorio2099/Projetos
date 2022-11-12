@@ -1,0 +1,30 @@
+﻿@model IEnumerable<EscolaAmarelinhas.Models.SchoolViewModels.DataMatriculaGroup>
+
+@{
+    ViewData["Title"] = "About";
+}
+
+<h1 class="jumbotron">Estatísticas de Matrículas</h1>
+
+<table class="table-dark">
+    <tr>
+        <th>
+            Data da Matrícula
+        </th>
+        <th>
+            Qtd de Alunos
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(modelItem => item.DataMatricula)
+            </th>
+            <th>
+                @item.AlunosCount
+            </th>
+        </tr>
+    }
+</table>
+

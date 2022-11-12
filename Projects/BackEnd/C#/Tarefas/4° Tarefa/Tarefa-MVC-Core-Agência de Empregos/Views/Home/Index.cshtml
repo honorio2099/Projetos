@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Tarefa_MVC_Core_Agência_de_Empregos.Models.Curriculo>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4"> Seja Bem Vindo! </h1>
+    <p>
+        <a>
+            Esse é um site de cadastro e avaliação de Currículos Go-IT. Aqui é possível Excluir Currículos indesejados, cadastrar candidatos a se analisar e mais!
+        </a>
+        <a>
+            Sinta-se a vontade e obrigado por usar nosso site! (se deseja alguém especifíco, apertar o botão Buscar.)
+        </a>
+    </p>
+</div>
+
+<hr />
+
+
+<p>
+    <a asp-action="Create" asp-controller="Curriculos" class="btn btn-success"> Cadastrar Novo Currículo </a>
+</p>
+
+<!-- Falta Apenas Consertar o Buscar, tentar usar o form -->
+
+
+<p>
+    <a asp-action="Buscar" asp-controller="Curriculos" class="btn btn-primary"> Buscar Currículo por Nome </a>
+</p>
+
+<!--
+<form asp-action="Buscar" asp-controller="Curriculos">
+    <input type="hidden" asp-for="Id_cur" />
+    <input type="submit" value="Buscar Currículo por Nome" class="btn btn-primary" />
+</form>
+     -->
+
+

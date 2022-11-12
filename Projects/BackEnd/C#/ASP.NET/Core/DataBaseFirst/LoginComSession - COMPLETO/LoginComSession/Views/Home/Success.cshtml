@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Success";
+}
+
+@using Microsoft.AspNetCore.Http;
+
+<div class="container">
+    <h1 class="jumbotron">Você está logado!!!!!</h1>
+    <hr />
+    <p>
+        <h3> Seja bem vindo @Context.Session.GetString("loginUsuario") </h3> 
+    </p>
+    <p>
+        <a asp-action="Logout" class="btn btn-outline-secondary">Logout</a>
+    </p>
+</div>

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<EscolaAmarelinhas.Models.Professor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdadeProf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarioProf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusProf)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeProf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdadeProf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SalarioProf)
+                </td>
+                <td>
+                    @item.VerificarStatus()
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdProf">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdProf">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdProf">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

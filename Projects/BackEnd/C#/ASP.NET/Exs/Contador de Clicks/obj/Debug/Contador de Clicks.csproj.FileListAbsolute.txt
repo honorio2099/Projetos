@@ -1,0 +1,7 @@
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\Contador de Clicks\bin\Contador de Clicks.dll.config
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\Contador de Clicks\bin\Contador de Clicks.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\Contador de Clicks\bin\Contador de Clicks.pdb
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\Contador de Clicks\obj\Debug\Contador de Clicks.csproj.AssemblyReference.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\Contador de Clicks\obj\Debug\Contador de Clicks.csproj.CoreCompileInputs.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\Contador de Clicks\obj\Debug\Contador de Clicks.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\Contador de Clicks\obj\Debug\Contador de Clicks.pdb

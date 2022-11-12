@@ -1,0 +1,40 @@
+﻿@model DicasTarefa.Models.Professores
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <h2>Tela dos Professores</h2>
+
+    <p> @Html.ActionLink("Lista de Professores", "ListadProfessores", "Professores", null, new { @class = "btn btn-default" }) </p>
+
+    <div class="row">
+        <div class="col-md-9">
+            @using (Html.BeginForm("Buscar", "Professores", FormMethod.Get))
+            {
+
+                <div class="panel panel-primary">
+
+                    <div class="panel heading">
+                        <p class="panel-title">Buscar Professores por? </p>
+                    </div>
+
+                    <div class="panel-body">
+                        <p><input type="text" name="nomeProfessor" placeholder="Digitar o Nome do Professor" /> </p>
+                        <p><input type="text" name="disciplinas" placeholder="Digitar a Disciplina do Professor" /> </p>
+                    </div>
+
+                    <div class="panel-footer">
+                        <input type="submit" value="Pesquisar" class="btn btn-default" />
+                    </div>
+
+                </div>
+            }
+
+            <p> @Html.ActionLink("Cadastrar Professores", "Cadastrar", "Professores", null, new { @class = "btn btn-default" }) </p>
+
+        </div>
+    </div>
+</div>
+

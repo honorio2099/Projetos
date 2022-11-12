@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EscolaAmarelinhas.Models.Disciplina>
+
+@{
+    ViewData["Title"] = "Buscar";
+}
+
+<h1>Buscar</h1>
+
+<form asp-action="Buscar">
+    <p>
+        Digite o nome da disciplina:
+        <input type="text" name="nomeFiltro" />
+        <input type="submit" value="Pesquisar" />
+    </p>
+</form>
+
+<div>
+    <h4>Disciplina</h4>
+    <hr />
+    <dl class="row">
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NomeDisciplina)
+                </dt>
+                <dd class="col-sm-10">
+                    @item.NomeDisciplina
+                </dd>
+                <hr />
+
+                <!-- Método com HTTPPOST
+                <form asp-action="DeleteAuto">
+                    <input type="hidden" name="id" value="@item.IdDisciplina" />
+                    <input type="submit" value="Excluir" class="btn btn-danger" />
+                </form>-->
+
+                <!-- Método com HTTPGET-->
+                <p>
+                    <a asp-action="DeleteAuto" asp-route-id="@item.IdDisciplina" class="btn btn-danger">Excluir</a>
+                </p>
+            }
+        }
+    </dl>
+</div>
+

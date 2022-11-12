@@ -1,0 +1,20 @@
+﻿@model _2nd_MVC.Models.Brinquedos
+
+@{
+    ViewBag.Title = "Detalhes dos Brinquedos";
+}
+
+<div class="container">
+
+    <div class="bg-sucess">
+        <h3><strong> @Model.Nome</strong></h3>
+    </div>
+    <div class="bg-info">
+        <p><h4>Faixa Etária: @Model.FaixaEtaria - @Model.Fabricante</h4></p>
+        <h3>R$ @Model.Preco</h3>
+    </div>
+
+</div>
+
+<h2>View1</h2>
+

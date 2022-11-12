@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Tarefa_MVC_Core_CHAPELARIA.Models.Vendas>
+
+@{
+    ViewData["Title"] = "Buscar";
+}
+
+<h1>Buscar</h1>
+
+<form asp-action="Buscar">
+    <p>
+         Digite o Nome do Cliente (Corretamente):
+        <input type="text" name="Nomecliente" />
+        <input type="submit" name="Pesquisar" />
+    </p>
+</form>
+
+<div>
+    <hr />
+    <dl class="row">
+
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+
+                <dt class="col-sm-2">
+                    Nome do Cliente
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Nomecliente
+                </dd>
+
+                <dt class="col-sm-2">
+                    Nome do Chapéu
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Nome_chapeu
+                </dd>
+
+                <dt class="col-sm-2">
+                    Forma de Pagamento
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Nome_formapag
+                </dd>
+
+                <dt class="col-sm-2">
+                    Data da Compra
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Data_compra
+                </dd>
+
+                <dt class="col-sm-2">
+                    Quantidade Desejada
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Qtd
+                </dd>
+
+                <dt class="col-sm-2">
+                    Total da Compra
+                </dt>
+                <dd class="col-sm-10">
+                    R$ @item.Total.ToString("#0.00") <!-- .Replace('.',',') ? -->
+                </dd>
+
+                <br />
+                <p>
+                    <a asp-action="Edit" asp-route-id="@item.Id_vendas">Editar</a> |
+                    <a asp-action="DeleteAuto" asp-route-id="@item.Id_vendas" class="btn btn-danger"> Excluir </a>
+                </p>
+            }
+        }
+
+    </dl>
+</div>
+

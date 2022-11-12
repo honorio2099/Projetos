@@ -1,0 +1,45 @@
+﻿@model MercadinhoNuvensFofas.Models.Produto
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h4>Exclusão de Produtos</h4>
+
+<h3>Desejo realmente excluir este produto?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.NomeProd)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.NomeProd)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.QtdDispProd)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.QtdDispProd)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.PrecoProd)
+        </dt>
+        <dd class = "col-sm-8">
+            R$ @Model.PrecoProd.ToString("#0.00")
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ImgProd)
+        </dt>
+        <dd class = "col-sm-8">
+            <img src="@Model.ImgProd" asp-append-version="true" width="100" height="100" />
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdProd" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>

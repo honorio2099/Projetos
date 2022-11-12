@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MercadinhoNuvensFofas.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="jumbotron"> Tela dos Produtos </h1>
+
+<p>
+    <a asp-action="Create">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QtdDispProd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoProd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imgProd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdDispProd)
+            </td>
+            <td>
+                R$ @item.PrecoProd.ToString("#0.00")
+            </td>
+            <td>
+                <img src="@item.imgProd" asp-append-version="true" width="50" />
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProd">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdProd">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProd">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

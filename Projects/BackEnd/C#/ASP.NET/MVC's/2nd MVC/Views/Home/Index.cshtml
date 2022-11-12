@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<div>
+    class = "row">
+    <div>
+        class="col-md-4">
+        <div>
+            class="panel panel-danger">
+            <div>
+                class="panel-heading"
+                <p class="panel-title"> Brinquedos </p>
+            </div>
+            <div class="panel-body">
+                @Html.ActionLink("Tela Brinquedos", "Index", "Brinquedos", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("Cadastrar Brinquedos", "Cadastrar", "Brinquedos", null, new { @class = "btn btn-default" })
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    class = "row">
+    <div>
+        class="col-md-4">
+        <div>
+            class="panel panel-primary">
+            <div>
+                class="panel-heading"
+                <p class="panel-title"> Clientes </p>
+            </div>
+            <div class="panel-body">
+                @Html.ActionLink("Tela Clientes", "Index", "Clientes", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("Cadastrar Clientes", "Cadastrar", "Clientes", null, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    class = "row">
+    <div>
+        class="col-md-4">
+        <div>
+            class="panel panel-sucess">
+            <div>
+                class="panel-heading"
+                <p class="panel-title"> Funcionários </p>
+            </div>
+            <div class="panel-body">
+                @Html.ActionLink("Tela Funcionários", "Index", "Funcionários", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("Cadastrar Funcionários", "Cadastrar", "Funcionários", null, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

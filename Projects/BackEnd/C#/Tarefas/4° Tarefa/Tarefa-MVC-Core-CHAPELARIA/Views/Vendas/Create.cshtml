@@ -1,0 +1,86 @@
+﻿@model Tarefa_MVC_Core_CHAPELARIA.Models.CHAPELARIA_VIEW_MODEL.Venda_ViewModel
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1> Compra de Chapéu </h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="Create" method="post">
+            <div class="form-group">
+                <label asp-for="Nome_chapeu" class="control-label"></label>
+                <select asp-for="Nome_chapeu" asp-items="@ViewBag.Chapéus" class="form-control">
+                </select>
+                <input type="submit" value="OK" class="btn btn-primary" />
+                <span asp-validation-for="Nome_chapeu" class="text-danger"></span>
+            </div>
+        </form>
+
+        <div>
+            <p>Cor: <label> @ViewBag.Cor </label> </p>
+            <p>Quantidade Disponível: <label> @ViewBag.QtdD </label> </p>
+            <p>Preço de Venda R$: <label> @ViewBag.Price </label> </p>
+
+        </div>
+
+        <br />
+
+        <form asp-action="Create">
+            <input type="hidden" asp-for="Nome_chapeu" />
+            <div class="form-group">
+                <label asp-for="Nomecliente" class="control-label"></label>
+                <input asp-for="Nomecliente" class="form-control" />
+                <span asp-validation-for="Nomecliente" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Data_compra" class="control-label"></label>
+                <input asp-for="Data_compra" class="form-control" />
+                <span asp-validation-for="Data_compra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Nome_formapag" class="control-label"></label>
+                <select asp-for="Nome_formapag" class="form-control">
+                    <option value=""></option>
+                    <option value="Em Dinheiro"> Dinheiro </option>
+                    <option value="Cartão de Crédito"> Crédito </option>
+                    <option value="Cartão de Débito"> Débito </option>
+                </select>
+                <span asp-validation-for="Nome_formapag" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <label asp-for="Qtd" class="control-label"></label>
+                <input asp-for="Qtd" class="form-control" />
+                <span asp-validation-for="Qtd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a> Total: <label asp-for="Total" class="control-label">@ViewBag.Total</label> </a>
+                    <input type="hidden" asp-for="Total" value="@ViewBag.Total" />
+                    <br />
+                    <input type="submit" value="Calcular Valor Total a Pagar" class="btn btn-primary" />
+                
+</div>
+            <p>
+                <!-- teoricamente correto - chamando o lblErros -->
+                <label>
+                    <a asp-validation-summary="ModelOnly" class="text-danger" />
+                </label>
+            </p>
+
+            <input type="submit" value="Comprar" class="btn btn-primary" />
+        </form>
+        </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

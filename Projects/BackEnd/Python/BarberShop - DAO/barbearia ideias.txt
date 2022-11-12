@@ -1,0 +1,20 @@
+Cliente -
+	agendar e ver agendamentos;
+	escolher qual franquia;
+	escolher tipo de serviço;
+	escolher barbeiro;
+	ver as informações dos barbeiros;
+
+Barbeiro -
+	ver clientes agendados;
+	confirmar o atendimento do cliente;
+	ver atendimentos concluídos;
+
+Propietário -
+	add/deletar barbeiros;
+	ver todos os atendimentos;
+	Relatório de atendimentos, valor total gerado em 		determinao período de tempo etc.
+	filtrar atendimentos por barbeiro, data etc;
+	add tipo de serviço
+
+OBS: acho que fiz um Mix disso tudo prof :)

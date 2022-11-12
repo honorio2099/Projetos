@@ -1,0 +1,29 @@
+﻿@model MercadinhoNuvensFofas.Models.FormaEntrega
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes da Forma de Entrega</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DescForma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DescForma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AcrescForma)%
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AcrescForma)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdForma">Edit</a> 
+</div>

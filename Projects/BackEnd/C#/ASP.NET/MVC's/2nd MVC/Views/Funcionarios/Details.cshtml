@@ -1,0 +1,59 @@
+﻿@model _2nd_MVC.Models.Funcionarios
+
+@{
+    ViewBag.Title = "Detalhes dos Funcionários";
+}
+
+<div class="container">
+
+    <h4>Detalhes dos Funcionários</h4>
+
+    <div>
+        <h4>Funcionarios</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IdFunc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IdFunc)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FuncNome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FuncNome)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FuncRg)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FuncRg)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FuncCpf)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FuncCpf)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FuncSalario)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FuncSalario)
+            </dd>
+
+        </dl>
+    </div>
+    
+</div>
+

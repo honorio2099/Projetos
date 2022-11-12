@@ -1,0 +1,9 @@
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\bin\Debug\Tarefa POO.exe
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\bin\Debug\Tarefa POO.pdb
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\obj\Debug\Tarefa POO.csproj.AssemblyReference.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\obj\Debug\Tarefa_POO.Form1.resources
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\obj\Debug\Tarefa_POO.Properties.Resources.resources
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\obj\Debug\Tarefa POO.csproj.GenerateResource.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\obj\Debug\Tarefa POO.csproj.CoreCompileInputs.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\obj\Debug\Tarefa POO.exe
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\2° Tarefa\Tarefa POO\obj\Debug\Tarefa POO.pdb

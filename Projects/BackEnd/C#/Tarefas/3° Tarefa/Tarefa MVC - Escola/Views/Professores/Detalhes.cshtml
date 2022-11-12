@@ -1,0 +1,112 @@
+﻿@model DicasTarefa.Models.Professores
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Informações sobre o Professor</h2>
+
+<div>
+    <h4>Professores</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProfessor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdProfessor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatanascimentoProfessor)
+        </dt>
+
+        <dd>
+            @Model.DatanascimentoProfessor.ToLongDateString()
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Experiencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Experiencia) anos de experiência
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeProfessor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeProfessor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereço)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereço)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Escolaridade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Escolaridade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplinas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disciplinas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disponibilidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disponibilidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+
+    </dl>
+</div>
+

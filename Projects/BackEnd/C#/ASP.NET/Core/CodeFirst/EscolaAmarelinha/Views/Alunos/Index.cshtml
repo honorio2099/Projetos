@@ -1,0 +1,100 @@
+﻿@model PaginatedList<EscolaAmarelinha.Models.Aluno>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="jumbotron">Lista de Alunos</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Aluno</a>
+</p>
+
+<form asp-action="Index" methof ="get">
+    <div class="form-actions no-color">
+        <p>
+             Procurar Por Nome: <input type="text" name="filtro" value="@ViewData["CurrentFilter"]"/>
+            <input type="submit"> value="Procurar" class="btn btn-default"/> |
+            <a asp-action="="Index>Retornar para a Lista</a>
+        </p>
+    </div>
+    </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a asp-action="Index" asp-route-ordem=@ViewBag.DataParam asp-route-filtroAtual="@ViewData["CurrentFilter"]"> Data </a>
+                    </th>
+                    <th>
+                        Idade
+                    </th>
+                    <th>
+                        Mensalidade
+                    </th>
+                    <th>
+                        <a asp-action="Index" asp-route-ordem="ViewData["NomeParam"]" asp-route-filtroAtual="@ViewData["CurrentFilter"]"> Nome </a>
+                    </th>
+                    <th>
+                        Curso
+                    </th>
+                    <th>
+                        Gênero
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.DataMatriculaAluno.ToLongDateString()
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Idade)
+                        </td>
+                        <td>
+                            R$ @item.MensalidadeAluno.ToString("#0.00")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NomeAluno)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CursoAluno)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GeneroAluno)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var NextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-ordem ="@ViewBag.OrdemAtual"
+   asp-route-filtroAtual = "@ViewData["CurrentFilter"]"
+   asp-route-pageNumber = "@(Model.PageIndex - 1)"
+   class="btn btn-default @prevDisabled"
+   >
+    Anterior
+</a>
+
+<a asp-action="Index"
+   asp-route-ordem="@ViewBag.OrdemAtual"
+   asp-route-filtroAtual="@ViewData["CurrentFilter"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   class="btn btn-default @NextDisabled"
+   >
+    Próximo
+</a>

@@ -1,0 +1,56 @@
+﻿@model EscolaAmarelinhas.Models.Aluno
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Excluir Alunos</h1>
+
+<h3>Deseja realmente excluir?</h3>
+<div>
+ 
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeAluno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeAluno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CursoAluno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CursoAluno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SexoAluno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SexoAluno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdadeAluno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdadeAluno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MensalidadeAluno)
+        </dt>
+        <dd class = "col-sm-10">
+            R$ @Model.MensalidadeAluno.ToString("#0.00")
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataMatriculaAluno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.DataMatriculaAluno.ToShortDateString()
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+    </form>
+</div>

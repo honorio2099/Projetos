@@ -1,0 +1,48 @@
+﻿@model IEnumerable<EscolaAmarelinhas.Models.Boletim>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="jumbotron">Tela das Notas - Boletim</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Notas</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Aluno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disciplina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotaDisciplina)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aluno.NomeAluno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disciplina.NomeDisciplina)
+            </td>
+            <td>
+                @item.NotaDisciplina.ToString("#0.00")
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdBoletim">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdBoletim">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdBoletim">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

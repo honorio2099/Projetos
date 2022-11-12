@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Tarefa_MVC_Core_Agência_de_Empregos.Models.Curriculo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="jumbotron"> Tela de Currículos </h1>
+    <hr />
+    <p>
+        <a asp-action="Create"> Cadastrar Novo Currículo </a>
+    </p>
+
+    <p>
+        <a asp-action="Buscar"> Buscar Currículo por Nome</a>
+    </p>
+</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome_candidato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rg_candidato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf_candidato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pretensao_sal)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome_candidato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rg_candidato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cpf_candidato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pretensao_sal)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id_cur"> Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id_cur"> Detalhes</a> |
+                        <a asp-action="DeleteAuto" asp-route-id="@item.Id_cur" class="btn btn-danger"> Excluir </a>
+                        <!-- <a asp-action="Delete" asp-route-id="@item.Id_cur"> Excluir</a> -->
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+

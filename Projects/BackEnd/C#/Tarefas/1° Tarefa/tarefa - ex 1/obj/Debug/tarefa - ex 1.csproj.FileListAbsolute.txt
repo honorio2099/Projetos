@@ -1,0 +1,14 @@
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\tarefa - ex 1\bin\tarefa - ex 1.dll.config
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\tarefa - ex 1\bin\tarefa - ex 1.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\tarefa - ex 1\bin\tarefa - ex 1.pdb
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\tarefa - ex 1\obj\Debug\tarefa - ex 1.csproj.AssemblyReference.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\tarefa - ex 1\obj\Debug\tarefa - ex 1.csproj.CoreCompileInputs.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\tarefa - ex 1\obj\Debug\tarefa - ex 1.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\ASP.NET\tarefa - ex 1\obj\Debug\tarefa - ex 1.pdb
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 1\bin\tarefa - ex 1.dll.config
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 1\bin\tarefa - ex 1.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 1\bin\tarefa - ex 1.pdb
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 1\obj\Debug\tarefa - ex 1.csproj.AssemblyReference.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 1\obj\Debug\tarefa - ex 1.csproj.CoreCompileInputs.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 1\obj\Debug\tarefa - ex 1.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 1\obj\Debug\tarefa - ex 1.pdb

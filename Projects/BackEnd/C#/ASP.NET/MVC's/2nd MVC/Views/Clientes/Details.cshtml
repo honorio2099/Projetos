@@ -1,0 +1,19 @@
+﻿@model _2nd_MVC.Models.Cliente
+
+@{
+    ViewBag.Title = "Detalhes do Cliente";
+}
+
+<div class="container">
+    <div class="text-info">
+        <h4>@Model.NomeCliente</h4>
+    </div>
+    <div class="bg-warning">
+        RG: @Model.Rg- CPF: @Model.Cpf
+    </div>
+    <hr />
+    <h3> Renda Mensal R$ @Model.Rendamensal</h3>
+</div>
+
+<h2>Details</h2>
+

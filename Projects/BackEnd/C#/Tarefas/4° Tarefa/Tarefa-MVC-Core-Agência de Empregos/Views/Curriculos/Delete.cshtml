@@ -1,0 +1,74 @@
+﻿@model Tarefa_MVC_Core_Agência_de_Empregos.Models.Curriculo
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Exclusão de Currículos</h1>
+
+<h3>Você realmente deseja apagar esse Currículo?</h3>
+<div>
+    <h4>Curriculo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome_candidato)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome_candidato)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rg_candidato)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rg_candidato)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cpf_candidato)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cpf_candidato)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Estado_civil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Estado_civil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Escolaridade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Escolaridade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pretensao_sal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pretensao_sal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ingles_nivel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ingles_nivel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Espanhol_nivel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Espanhol_nivel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Frances_nivel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Frances_nivel)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id_cur" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> 
+    </form>
+</div>

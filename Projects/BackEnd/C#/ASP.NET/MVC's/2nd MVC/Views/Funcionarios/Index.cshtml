@@ -1,0 +1,42 @@
+﻿@model IEnumerable<_2nd_MVC.Models.Funcionarios>
+
+@{
+    ViewBag.Title = "Tela de Funcionários";
+}
+
+<div class="container">
+
+    <hr />
+    <p>
+    @Html.ActionLink("Cadastrar Funcionários", "Cadastrar", "Funcionários", null, new { @class = "btn btn-default" })
+    </p>
+    <hr />
+    <h4><strong>Lista de Funcionários</strong></h4>
+
+
+    <table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FuncNome)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.FuncNome)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.IdFunc },
+                   new { @class = "btn btn-default" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

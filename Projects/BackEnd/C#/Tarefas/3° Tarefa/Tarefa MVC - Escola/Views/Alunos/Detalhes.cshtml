@@ -1,0 +1,110 @@
+﻿@model DicasTarefa.Models.Alunos
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Informações sobre o Aluno</h2>
+
+<div>
+    <h4>Alunos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimentoaluno)
+        </dt>
+
+        <dd>
+            @Model.DataNascimentoaluno.ToLongDateString()
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeAluno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeAluno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SerieAluno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SerieAluno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdAluno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdAluno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorMensal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorMensal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeMae)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeMae)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Responsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Responsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RgResponsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RgResponsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CpfResponsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CpfResponsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullAddress)
+        </dd>
+
+    </dl>
+</div>

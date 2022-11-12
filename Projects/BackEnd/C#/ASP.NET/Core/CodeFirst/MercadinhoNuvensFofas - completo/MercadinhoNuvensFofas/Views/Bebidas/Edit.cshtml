@@ -1,0 +1,49 @@
+﻿@model MercadinhoNuvensFofas.Models.Bebida
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h4>Alteração de Bebidas</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdBeb" />
+            <div class="form-group">
+                <label asp-for="NomeBeb" class="control-label"></label>
+                <input asp-for="NomeBeb" class="form-control" />
+                <span asp-validation-for="NomeBeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdDispBeb" class="control-label"></label>
+                <input asp-for="QtdDispBeb" class="form-control" />
+                <span asp-validation-for="QtdDispBeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecoBeb" class="control-label"></label>
+                <input asp-for="PrecoBeb" class="form-control" />
+                <span asp-validation-for="PrecoBeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImgBeb" class="control-label"></label>
+                <input type="hidden" asp-for="ImgBeb" class="form-control" />
+                <img src="@Model.ImgBeb" asp-append-version="true" height="75" width="75" />
+                <input type="file" name="novaFoto" />
+                <span asp-validation-for="ImgBeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

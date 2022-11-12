@@ -1,0 +1,35 @@
+﻿@model EscolaAmarelinha.Models.Boletim
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes da nota</h1>
+
+<div>
+    <h4>Boletim</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Aluno.NomeAluno
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Disciplina)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Disciplina.NomeDisciplina
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NotaDisciplina)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.NotaDisciplina.ToString("#0.00")
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdBoletim">Detalhes</a> |
+</div>

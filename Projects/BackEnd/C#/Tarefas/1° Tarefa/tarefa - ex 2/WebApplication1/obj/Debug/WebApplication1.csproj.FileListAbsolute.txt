@@ -1,0 +1,7 @@
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 2\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 2\WebApplication1\bin\WebApplication1.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 2\WebApplication1\bin\WebApplication1.pdb
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 2\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 2\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 2\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\André Felipe Honório\Desktop\Mídias\Eu\Programação\C#\Tarefas\tarefa - ex 2\WebApplication1\obj\Debug\WebApplication1.pdb

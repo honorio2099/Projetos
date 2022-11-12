@@ -1,0 +1,37 @@
+﻿@model IEnumerable <DicasTarefa.Models.Alunos>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <h2>Tela dos Alunos</h2>
+
+    <p> @Html.ActionLink("Lista de Alunos", "ListadAlunos", "Alunos", null, new { @class = "btn btn-default" }) </p>
+
+    <div class="row">
+        <div class="col-md-9">
+            @using (Html.BeginForm("Buscar", "Alunos", FormMethod.Get))
+            {
+                <div class="panel panel-primary">
+
+                    <div class="panel heading">
+                        <p class="panel-title">Buscar Alunos por? </p>
+                    </div>
+
+                    <div class="panel-body">
+                        <p><input type="text" name="nomeAluno" placeholder="Digitar o Nome do Aluno" /> </p>
+                        <p><input type="text" name="serieAluno" placeholder="Digitar a Série do Aluno" /> </p>
+                    </div>
+
+                    <div class="panel-footer">
+                        <input type="submit" value="Pesquisar" class="btn btn-default" />
+                    </div>
+
+                </div>
+            }
+
+            <p>@Html.ActionLink("Cadastrar Alunos", "Cadastrar", "Alunos", null, new { @class = "btn btn-default" })</p>
+
+        </div>
+    </div>
+</div>

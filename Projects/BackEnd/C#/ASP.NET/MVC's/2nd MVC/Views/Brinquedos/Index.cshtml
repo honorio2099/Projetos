@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<_2nd_MVC.Models.Brinquedos>
+    <!-- -->
+@{ 
+// @model - variável que recebe algo
+// IEnumerable - Interface que recebe a lista
+// <_2nd_MVC.Models.Brinquedos> - representado pelas setas é o "endereço" da lista
+}
+@{
+    ViewBag.Title = "Tela dos Brinquedos";
+}
+
+
+
+<div class="container">
+
+    <hr />
+    <p>@Html.ActionLink("Cadastrar Clientes", "Cadastrar", "Clientes", null, new { @class = "btn btn-default" }) </p>
+    <hr />
+    <h4><strong>Lista de Brinquedos</strong></h4>
+
+
+        @foreach (var item in Model)
+        {
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <p class="panel-title> @item.Nome</p>
+                </div>
+                <div class="panel-body">
+                    @item.Preco
+                </div>
+                <div class="panel-footer">
+                    @Html.ActionLink("Detalhes do Brinquedo", "Details", new { id = item.IdBriquedo }, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        }
+</div>
+
+<h2>View</h2>
+

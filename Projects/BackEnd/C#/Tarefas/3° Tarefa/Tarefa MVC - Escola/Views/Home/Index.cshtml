@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="container">
+
+    <div class="text-center">
+        <h1 class="display-4"> Seja Bem Vindo! </h1>
+        <p>Este é um site que armazena informações sobre Professores e Alunos. Acesse através das Abas ou Botões Disponíveis.</p>
+    </div>
+
+    <p>@Html.ActionLink("Tela Alunos", "Index", "Alunos", null, new { @class = "btn btn-default" })</p>
+    <p>@Html.ActionLink("Tela Professores", "Index", "Professores", null, new { @class = "btn btn-default" })</p>
+</div>

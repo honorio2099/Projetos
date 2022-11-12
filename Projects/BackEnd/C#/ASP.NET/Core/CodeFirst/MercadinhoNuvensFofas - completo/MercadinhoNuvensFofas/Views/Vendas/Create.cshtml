@@ -1,0 +1,64 @@
+﻿@model MercadinhoNuvensFofas.Models.Venda
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Cadastrar Venda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeCliente" class="control-label"></label>
+                <input asp-for="NomeCliente" class="form-control" />
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProd" class="control-label"></label>
+                <select asp-for="IdProd" class ="form-control" asp-items="ViewBag.IdProd"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdBeb" class="control-label"></label>
+                <select asp-for="IdBeb" class ="form-control" asp-items="ViewBag.IdBeb"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdForma" class="control-label"></label>
+                <select asp-for="IdForma" class ="form-control" asp-items="ViewBag.IdForma"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataCompra" class="control-label"></label>
+                <input asp-for="DataCompra" class="form-control" />
+                <span asp-validation-for="DataCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdProd" class="control-label"></label>
+                <input asp-for="QtdProd" class="form-control" />
+                <span asp-validation-for="QtdProd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdBeb" class="control-label"></label>
+                <input asp-for="QtdBeb" class="form-control" />
+                <span asp-validation-for="QtdBeb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Total R$ <label class="form-control">@ViewBag.TotalPagar</label>
+                <input type="hidden" asp-for="TotalPagar" value="@ViewBag.TotalPagar" />
+                <span asp-validation-for="TotalPagar" class="text-danger"></span>
+                <input type="submit" value="Calcular Total Compra" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Tarefa_MVC_Core_Agência_de_Empregos.Models.Curriculo>
+
+@{
+    ViewData["Title"] = "Buscar";
+}
+
+<h1>Buscar</h1>
+
+<form asp-action = "Buscar">
+    <p>
+        Digite o Nome do Candidato:
+        <input type="text" name="nome_candidato" />
+        <input type="submit" name="pesquisar" />
+    </p>
+</form>
+
+<div>
+    <h4>Curriculo</h4>
+    <hr />
+    <dl class="row">
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <dt class="col-sm-2">
+                    Nome do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Nome_candidato
+                </dd>
+
+                <dt class="col-sm-2">
+                    RG do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Rg_candidato
+                </dd>
+
+                <dt class="col-sm-2">
+                    CPF do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Cpf_candidato
+                </dd>
+
+                <dt class="col-sm-2">
+                    Estado Civil do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Estado_civil
+                </dd>
+
+                <dt class="col-sm-2">
+                    Escolaridade do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Escolaridade
+                </dd>
+
+                <dt class="col-sm-2">
+                    Nível de Inglês do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Ingles_nivel
+                </dd>
+                <dt class="col-sm-2">
+                    Nível de Espanhol do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Espanhol_nivel
+                </dd>
+                <dt class="col-sm-2">
+                    Nível de Francês do Candidato
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Frances_nivel
+                </dd>
+                <dt class="col-sm-2">
+                    Pretensão Salarial do Candidato R$
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Pretensao_sal
+                </dd>
+
+                <hr />
+                <p>
+                    <a asp-action="DeleteAuto" asp-route-id="@item.Id_cur" class="btn btn-danger"> Excluir </a>
+                </p>
+            }
+        }
+
+    </dl>
+</div>
+
+

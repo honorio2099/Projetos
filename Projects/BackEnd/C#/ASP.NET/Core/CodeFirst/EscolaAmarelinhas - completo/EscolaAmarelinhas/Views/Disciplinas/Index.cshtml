@@ -1,0 +1,38 @@
+﻿@model IEnumerable<EscolaAmarelinhas.Models.Disciplina>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="jumbotron">Tela das Disciplinas</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Disciplina</a>
+</p>
+<p>
+    <a asp-action="Buscar">Buscar Disciplinas por nome</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeDisciplina)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeDisciplina)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdDisciplina">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdDisciplina">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdDisciplina">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

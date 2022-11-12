@@ -1,0 +1,32 @@
+﻿@model IEnumerable<_2nd_MVC.Models.Cliente>
+
+@{
+    ViewBag.Title = "Tela dos Clientes";
+}
+
+<div class="container">
+    <hr />
+    <p>@Html.ActionLink("Cadastrar Clientes","Cadastrar",null,new { @class = "btn btn-default" }) </p>
+        <hr />
+
+        <h4> <strong> Lista de Clientes </strong> </h4>
+
+        @foreach (var item in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title"> @item.NomeCliente</p>
+                </div>
+                <div class="panel-body">
+                    @Html.ActionLink("Detalhes do Cliente", "Details", new { id = item.Idcli }, new { @class = "btn btn-default" })
+                </div>
+                <div class="panel-footer">
+
+                </div>
+            </div>
+        }
+
+</div>
+
+<h2>Index</h2>
+

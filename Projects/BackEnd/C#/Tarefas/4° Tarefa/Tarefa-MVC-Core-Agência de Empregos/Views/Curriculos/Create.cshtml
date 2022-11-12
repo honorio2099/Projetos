@@ -1,0 +1,118 @@
+﻿@model Tarefa_MVC_Core_Agência_de_Empregos.Models.Curriculo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastro de Currículo</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Nome_candidato" class="control-label"></label>
+                <input asp-for="Nome_candidato" class="form-control" />
+                <span asp-validation-for="Nome_candidato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rg_candidato" class="control-label"></label>
+                <input asp-for="Rg_candidato" class="form-control" />
+                <span asp-validation-for="Rg_candidato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cpf_candidato" class="control-label"></label>
+                <input asp-for="Cpf_candidato" class="form-control" />
+                <span asp-validation-for="Cpf_candidato" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Estado_civil" class="control-label"></label>
+                <select asp-for="Estado_civil" class="form-control">
+                    <option value=""></option>
+                    <option value="Casado/a">Casado/a</option>
+                    <option value="Solteiro/a">Solteiro/a</option>
+                    <option value="Viúvo/a">Viúvo/a</option>
+                </select>
+                <!-- <input asp-for="Estado_civil" class="form-control" /> -->
+                <span asp-validation-for="Estado_civil" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Escolaridade" class="control-label"></label>
+                <select asp-for="Escolaridade" class="form-control">
+                    <option value=""></option>
+                    <option value="Curso Técnico">Curso Técnico</option>
+                    <option value="Curso Superior">Curso Superior</option>
+                    <option value="Pós-Graduação">Pós-Graduação</option>
+                </select>
+                <!-- <input asp-for="Escolaridade" class="form-control" /> -->
+                <span asp-validation-for="Escolaridade" class="text-danger"></span>
+            </div>
+
+            <!-- <tr> é uma linha na tabela -->
+            <!-- <th> é uma coluna na tabela -->
+            <table>
+                <thead>
+
+                        <tr>
+                            <th>
+                                <div class="form-group">
+                                    <label asp-for="Ingles_nivel" class="control-label"></label>
+                                    <!-- <input asp-for="Ingles_nivel" class="form-control" /> -->
+                                    <p> <input type="radio" asp-for="Ingles_nivel" value = "Fluente" /> Fluente </p>
+                                    <p> <input type="radio" asp-for="Ingles_nivel" value = "Intermediário" /> Intermediário </p>
+                                    <p> <input type="radio" asp-for="Ingles_nivel" value = "Básico" /> Básico </p>
+                                    <span asp-validation-for="Ingles_nivel" class="text-danger"></span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <div class="form-group">
+                                    <label asp-for="Espanhol_nivel" class="control-label"></label>
+                                    <!-- <input asp-for="Espanhol_nivel" class="form-control" /> -->
+                                    <p> <input type="radio" asp-for="Espanhol_nivel" value="Fluente" /> Fluente </p>
+                                    <p> <input type="radio" asp-for="Espanhol_nivel" value="Intermediário" /> Intermediário </p>
+                                    <p> <input type="radio" asp-for="Espanhol_nivel" value="Básico" /> Básico </p>
+                                    <span asp-validation-for="Espanhol_nivel" class="text-danger"></span>
+                                </div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <div class="form-group">
+                                    <label asp-for="Frances_nivel" class="control-label"></label>
+                                    <!-- <input asp-for="Frances_nivel" class="form-control" /> -->
+                                    <p> <input type="radio" asp-for="Frances_nivel" value="Fluente" /> Fluente </p>
+                                    <p> <input type="radio" asp-for="Frances_nivel" value="Intermediário" /> Intermediário </p>
+                                    <p> <input type="radio" asp-for="Frances_nivel" value="Básico" /> Básico </p>
+                                    <span asp-validation-for="Frances_nivel" class="text-danger"></span>
+                                </div>
+                            </th>
+                        </tr>
+
+               </thead>
+            </table>
+
+            <div class="form-group">
+                <label asp-for="Pretensao_sal" class="control-label"></label>
+                <input asp-for="Pretensao_sal" class="form-control" />
+                <span asp-validation-for="Pretensao_sal" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

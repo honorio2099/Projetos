@@ -1,0 +1,14 @@
+Este código foi feito totalmente sem o uso da linguagem Python para efeito 
+práticos. 
+Como assim você pergunta? 
+o que quero dizer é que, apesar do código ser em Python eu o fiz sem a linguagem estar no meu computador, por conta de um problema que não 
+consegui resolver onde não conseguia importar classes usando o POO (impossibilitando o desenvolvimento completo do código, pelo menos a princípio). 
+Tentar resolver o problema fez com que a situação piorasse:
+agora o Python não funcionava mais e tentar instalar causava erro na instalação. 
+Sem idéias para resolver este problema mesmo depois de muita pesquisa mas tendo que continuar o projeto, decidi continuar mesmo sem o Python estar no meu computador, resultando em uma total absência da parte de testagem,
+essencial para qualquer código.
+
+Dito tudo isso, fica claro que pode (Deve!) haver alguns(talvez Muitos!) erros no código, em especial em relação ao Tkinter pois não sou mestre em construção de Tela, partes em relação a alinhamento ou beleza em relação a posicionamento de botões/textbox com certeza estão estranhas/erradas.
+talvez haja erros em relação a funcionamento também, mas não tenho certeza e provavelmente são bem menores se comparado aos erros de Tela/Tkinter.
+
+Em relação aos Erros: não ficar testando o código constantemente fez com que eu me atentasse bem em relação ao que eu escrevia, passei bastante tempo no código de qualquer maneira e tenho confiança em dizer (Espero) que o programa deve estar funcionando bem, mas com certeza falta calibragem e polimento. objetivo deste READ-ME é pedir perdão por qualquer problema no código, infelizmente foi algo fora do meu controle. Sim, esta versão só está aqui ainda pois ainda não consegui consertar o Python.

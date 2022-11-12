@@ -1,0 +1,42 @@
+﻿@model MercadinhoNuvensFofas.Models.Produto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Detalhes do Produto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.NomeProd)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.NomeProd)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.QtdDispProd)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.QtdDispProd)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.PrecoProd)
+        </dt>
+        <dd class = "col-sm-8">
+            R$ @Model.PrecoProd.ToString("#0.00")
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.ImgProd)
+        </dt>
+        <dd class="col-sm-8">
+            <img src="@Model.ImgProd" asp-append-version="true" width="100" height="100"/>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdProd">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

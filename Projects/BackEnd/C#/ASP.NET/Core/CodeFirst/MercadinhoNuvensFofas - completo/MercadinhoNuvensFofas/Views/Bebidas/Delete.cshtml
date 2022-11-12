@@ -1,0 +1,45 @@
+﻿@model MercadinhoNuvensFofas.Models.Bebida
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h4>Exclusão de Bebidas</h4>
+
+<h5>Deseja realmente excluir?</h5>
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeBeb)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeBeb)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QtdDispBeb)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QtdDispBeb)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecoBeb)
+        </dt>
+        <dd class="col-sm-10">
+            R$ @Model.PrecoBeb.ToString("#0.00").Replace('.', ',')
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImgBeb)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Model.ImgBeb" asp-append-version="true" width="75" height="75" />
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdBeb" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>

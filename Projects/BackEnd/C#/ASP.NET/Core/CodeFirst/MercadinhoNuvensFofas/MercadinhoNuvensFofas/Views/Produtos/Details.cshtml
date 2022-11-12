@@ -1,0 +1,41 @@
+﻿@model MercadinhoNuvensFofas.Models.Produto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="jumbotron"> Detalhes do Produto</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.NomeProd)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.NomeProd)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.QtdDispProd)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.QtdDispProd)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.PrecoProd)
+        </dt>
+        <dd class="col-sm-8">
+            R$ @Model.PrecoProd.ToString("#0.00")
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.imgProd)
+        </dt>
+        <dd class="col-sm-8">
+            <img src="@Model.imgProd" asp-append-version="true" width="100" height="100" />
+            <!-- poderia ter outro nome ali depois da pasta IMG, é basicamente acessar o endereço da imagem -->
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdProd">Editar</a> 
+</div>

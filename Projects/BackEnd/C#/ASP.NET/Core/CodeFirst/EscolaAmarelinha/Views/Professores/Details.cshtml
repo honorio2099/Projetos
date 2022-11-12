@@ -1,0 +1,41 @@
+﻿@model EscolaAmarelinha.Models.Professor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes da Disciplinas</h1>
+
+<div>
+    <h4>Professor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdadeProf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdadeProf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeProf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeProf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Salario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Salario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StatusProf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StatusProf)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdProf">Editar</a> 
+</div>

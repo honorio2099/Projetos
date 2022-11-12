@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MercadinhoNuvensFofas.Models.Bebida>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="jumbotron">Tela das Bebidas</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeBeb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QtdDispBeb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoBeb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImgBeb)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeBeb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdDispBeb)
+            </td>
+            <td>
+                R$ @item.PrecoBeb.ToString("#0.00").Replace('.', ',')
+            </td>
+            <td>
+               <img src="@item.ImgBeb" asp-append-version="true" width="50" height="50" />
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdBeb">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdBeb">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdBeb">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
